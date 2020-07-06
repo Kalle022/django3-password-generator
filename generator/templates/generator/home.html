@@ -3,14 +3,17 @@
     <div class="container text-center">
         <h1>Select conditions</h1>
         <form action="{% url 'password' %}">
-            <input type="number" name="length" min="1" style="text-align: center;" value="1"> Length
+            <input type="number" name="length" min="1" style="text-align: center;" value="8"> Length
             <br>
             <input type="checkbox" name="uppercase"> uppercase
             <br> 
+            <input type="checkbox" name="lowercase"> lowercase
+            <br>
             <input type="checkbox" name="numbers"> numbers
-            <br> 
+            <br>  
             <input type="checkbox" name="special"> Special Characters
             <br> 
+            <br>
             <input type="submit" value="Generate Password" class="btn btn-primary">
         </form>
         <br>
