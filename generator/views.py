@@ -8,7 +8,12 @@ def home(request):
 
 def password(request):
     passwordCharcters = list('abcdefghijklmnopqrstuvwxyz')
-    length = int(request.GET.get('length', 12))
+
+    try:
+        length = int(request.GET.get('length'))
+    except:
+        length = 8
+
     thePassword = ''
 
     if request.GET.get('uppercase'):

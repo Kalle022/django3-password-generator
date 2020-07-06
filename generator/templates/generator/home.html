@@ -1,27 +1,20 @@
 {% extends 'generator/base.html' %}
 {% block content %}
     <div class="container text-center">
-        <h1>Home</h1>
+        <h1>Select conditions</h1>
         <form action="{% url 'password' %}">
-            <select name="length">
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>  
-                <option value="10">10</option>  
-                <option value="11">11</option>  
-                <option value="12" selected='selected'>12</option>  
-                <option value="13">13</option>  
-                <option value="14">14</option>                         
-            </select> Length
+            <input type="number" name="length" min="1" style="text-align: center;" value="1"> Length
             <br>
             <input type="checkbox" name="uppercase"> uppercase
             <br> 
-            <input type="checkbox" name="special"> Special Characters
-            <br> 
             <input type="checkbox" name="numbers"> numbers
+            <br> 
+            <input type="checkbox" name="special"> Special Characters
             <br> 
             <input type="submit" value="Generate Password" class="btn btn-primary">
         </form>
+        <br>
+        <br>
+        <p><i>By default, if you left all blank your password will be composed of eight(8) lowercase letters.</i></p>
     </div>
 {% endblock %}
